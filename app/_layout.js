@@ -6,7 +6,7 @@ SplashScreen.preventAutoHideAsync();
 
 const { Stack } = require("expo-router");
 
-const Layout = () => { 
+const Layout = () => {
 
     const [fontsLoaded] = useFonts({
         DMBold: require('../assets/fonts/DMSans-Bold.ttf'),
@@ -15,13 +15,13 @@ const Layout = () => {
     })
 
     const onLayoutRootView = useCallback(async () => {
-        if(fontsLoaded) {
+        if (fontsLoaded) {
             await SplashScreen.hideAsync();
         }
     }, [fontsLoaded])
 
-    if(!fontsLoaded) return null
-    return <Stack onLayout={onLayoutRootView}/>;
+    if (!fontsLoaded) return null
+    return <Stack onLayout={onLayoutRootView} />;
 }
 
 
