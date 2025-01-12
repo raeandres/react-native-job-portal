@@ -25,7 +25,11 @@ const JobDetails = () => {
 
     const [refreshing, setRefreshing] =  useState(false); 
 
-    const onRefresh = () => {};
+    const onRefresh = useCallback(() => {
+            setRefreshing(true);
+            refetch();
+            setRefreshing(false);
+    }, [])
 
     const displayTabContent = () => {
         switch (activeTab){
@@ -76,7 +80,6 @@ const JobDetails = () => {
                     refreshControl={
                         <RefreshControl 
                             refreshing={refreshing}
-                            // onRefresh={setRefreshing}
                             onRefresh={onRefresh}
                         />
                     }
