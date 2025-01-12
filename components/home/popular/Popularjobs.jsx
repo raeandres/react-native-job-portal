@@ -20,10 +20,6 @@ const Popularjobs = () => {
       date_posted: 'all'
   })
 
-  console.log(data);
-
-  const jobCards = [1, 2, 3, 4, 5, 6, 7, 8];
-
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -50,7 +46,7 @@ const Popularjobs = () => {
           />
         )}
       </View>
-    </View>
+    </View> 
   )
 }
 
