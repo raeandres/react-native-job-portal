@@ -13,12 +13,18 @@ const Popularjobs = () => {
 
   const { data, isLoading, error } = useFetch(
     'search', {
-      query: 'Node.js developer in New-York, USA',
-      page: '1',
-      num_pages: '1',
-      country: 'us',
-      date_posted: 'all'
+    query: 'Node.js developer in New-York, USA',
+    page: '1',
+    num_pages: '1',
+    country: 'us',
+    date_posted: 'all'
   })
+
+  const [selectedJob, setSelectedJob] = useState();
+
+  const handleCardPress = (item) => {
+    alert(`Selected Job: ${item.employer_name}`);
+  };
 
   return (
     <View style={styles.container}>
@@ -38,7 +44,9 @@ const Popularjobs = () => {
           <FlatList
             data={data}
             renderItem={({ item }) => (
-              <PopularJobCard item={item} />
+              <PopularJobCard item={item}
+                selectedJob={selectedJob}
+                handleCardPress={handleCardPress} />
             )}
             keyExtractor={item => item?.job_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
@@ -46,7 +54,7 @@ const Popularjobs = () => {
           />
         )}
       </View>
-    </View> 
+    </View>
   )
 }
 
