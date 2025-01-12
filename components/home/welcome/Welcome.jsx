@@ -20,12 +20,25 @@ const Welcome = () => {
         <Text style={styles.welcomeMessage}>Find your perfect job</Text>
       </View>
       
-      <View style={styles.seachContainer}>
-        <View style={styles.searchWrappe}>
+      <View style={styles.searchContainer}>
+        <View style={styles.searchWrapper}>
           <TextInput
             style={styles.searchInput}
+            value=""
+            onChange={() => {}}
+            placeholder="What are you looking for?"
           />
         </View>
+
+        <TouchableOpacity 
+          style={styles.searchBtn}
+          onPress={() => {}}>
+          <Image
+            source={icons.search}
+            resizeMode="contain"
+            style={styles.searchBtnImage}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   )
