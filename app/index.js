@@ -3,7 +3,9 @@ import { View, Text } from "react-native";
 const Home = () => {
     return(
         <View>
-            Home
+            <Text>
+                Home
+            </Text>
         </View>
     )
 }
