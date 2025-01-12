@@ -1,6 +1,6 @@
 const { Stack } = require("expo-router");
 
-const Layout = () => {
+const Layout = () => { 
     return <Stack/>;
 }
 
