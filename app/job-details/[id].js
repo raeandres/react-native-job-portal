@@ -13,7 +13,7 @@ const JobDetails = () => {
     const router = useRouter();
 
     const tabs = ["About", "Qualifications", "Responsibilities"];
-    const [activeTab, setActive] = useState(tabs[0]); 
+    const [activeTab, setActiveTab] = useState(tabs[0]); 
 
     const { data, isLoading, error, refetch } = useFetch(
         'job-details', {
