@@ -6,7 +6,20 @@
     ],
     "name": "react-native-job-portal",
     "slug": "react-native-job-portal",
-    "newArchEnabled":true,
-    "orientation": "portrait"
+    "newArchEnabled": true,
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d8d5bd7a-5713-44fe-8b74-a9d5d1eb450b"
+      }
+    },
+    "android": {
+      "package": "com.raean.andres.reactnativejobportal"
+    },
+    "ios": {
+      "bundleIdentifier": "com.raean.andres.reactnativejobportal"
+    }
   }
 }
