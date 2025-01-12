@@ -12,6 +12,9 @@ const JobDetails = () => {
     const params = useLocalSearchParams();
     const router = useRouter();
 
+    const tabs = ["About", "Qualifications", "Responsibilities"];
+    const [activeTab, setActive] = useState(tabs[0]); 
+
     const { data, isLoading, error, refetch } = useFetch(
         'job-details', {
         job_id: params.id,
@@ -67,7 +70,9 @@ const JobDetails = () => {
                             location={data[0].job_country}
                         />
                         <JobTabs
-                           
+                            tabs={tabs}
+                            activeTab={activeTab}
+                            setActiveTab={setActiveTab}
                         />
                     </View>)} 
                 </ScrollView>
